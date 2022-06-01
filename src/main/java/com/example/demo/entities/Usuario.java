@@ -1,6 +1,8 @@
 package com.example.demo.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+
 
 @Entity
 @Table(name = "usuarios")
@@ -10,9 +12,10 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Debe ingresar el nombre de usuario")
     @Column(name = "nombreUsuario")
     private String nombreUsuario;
-
+    @NotBlank(message = "Debe ingresar la contraseña")
     @Column(name = "contraseñaUsuario")
     private String contraseñaUsuario;
 
