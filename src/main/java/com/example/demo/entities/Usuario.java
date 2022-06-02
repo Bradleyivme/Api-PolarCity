@@ -42,5 +42,5 @@ public class Usuario {
     public void setContraseñaUsuario(String contraseñaUsuario) {
         this.contraseñaUsuario = contraseñaUsuario;
     }
-
+//Comentario para un commit
 }
