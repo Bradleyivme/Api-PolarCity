@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NegativeOrZero;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -26,7 +27,7 @@ public class Producto {
     private String descripcion;
 
     @NotNull(message = "Debe ingresar el precio del producto")
-    @NegativeOrZero(message = "El precio no puede ser igual a 0 o un número negativo")
+    @Min(value = 1)
     @Column(name = "precio")
     private double precio;
 
