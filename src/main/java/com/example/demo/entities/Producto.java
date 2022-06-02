@@ -1,16 +1,20 @@
 package com.example.demo.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name ="productos")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idProducto;
 
     @NotBlank(message = "Debe ingresar el código del producto")
     @Column(name = "codigo")
@@ -30,11 +34,11 @@ public class Producto {
     private double precio;
 
     public Long getId() {
-        return id;
+        return idProducto;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idProducto = id;
     }
 
     public String getCodigo() {

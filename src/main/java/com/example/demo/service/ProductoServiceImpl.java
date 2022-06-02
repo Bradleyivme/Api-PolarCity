@@ -23,8 +23,8 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public Producto buscarporId(long id) {
-        Optional<Producto> OPproducto = productoDAO.findById(id);
+    public Producto buscarporId(long idProducto) {
+        Optional<Producto> OPproducto = productoDAO.findById(idProducto);
 
         if(OPproducto.isPresent()) {
             return OPproducto.get();
@@ -43,9 +43,9 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public void modificarProducto(long id, Producto producto) {
-        if(productoDAO.existsById(id)){
-            producto.setId(id);
+    public void modificarProducto(long idProducto, Producto producto) {
+        if(productoDAO.existsById(idProducto)){
+            producto.setIdProducto(idProducto);
             productoDAO.save(producto);
         }else {
 
@@ -55,9 +55,9 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public void borrarProducto(long id) {
-        if(productoDAO.existsById(id)) {
-            productoDAO.deleteById(id);
+    public void borrarProducto(long idProducto) {
+        if(productoDAO.existsById(idProducto)) {
+            productoDAO.deleteById(idProducto);
 
         }else {
 

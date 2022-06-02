@@ -7,8 +7,9 @@ import java.util.List;
 
 public interface ProductoService {
     public List<Producto> listarProductos();
-    public Producto buscarporId(long id);
+    public Producto buscarporId(long idProducto);
     public void crearProducto(Producto producto);
-    public void modificarProducto(long id, Producto producto);
-    public void borrarProducto(long id);
+    public void modificarProducto(long idProducto, Producto producto);
+    public void borrarProducto(long idProducto);
 }
+
