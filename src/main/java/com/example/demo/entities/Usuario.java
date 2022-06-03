@@ -16,8 +16,8 @@ public class Usuario {
     @Column(name = "nombreUsuario")
     private String nombreUsuario;
     @NotBlank(message = "Debe ingresar la contraseña")
-    @Column(name = "contraseñaUsuario")
-    private String contraseñaUsuario;
+    @Column(name = "passwordUsuario")
+    private String passwordUsuario;
 
     public Long getId() {
         return id;
@@ -35,13 +35,15 @@ public class Usuario {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String getContraseñaUsuario() {
-        return contraseñaUsuario;
-    }
+	public String getPasswordUsuario() {
+		return passwordUsuario;
+	}
 
-    public void setContraseñaUsuario(String contraseñaUsuario) {
-        this.contraseñaUsuario = contraseñaUsuario;
-    }
+	public void setPasswordUsuario(String passwordUsuario) {
+		this.passwordUsuario = passwordUsuario;
+	}
+
+    
 //Comentario para un commit
 }
 
