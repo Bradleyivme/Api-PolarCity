@@ -43,14 +43,14 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public void modificarProducto(long idProducto, Producto producto) {
-        if(productoDAO.existsById(idProducto)){
-            producto.setIdProducto(idProducto);
-            productoDAO.save(producto);
-        }else {
-
-            throw new NotFoundException("Producto no encontrado");
-        }
+    public void modificarProducto(long id, Producto producto) {
+    	if(productoDAO.existsById(id)) {
+    		producto.setId(id);
+    		productoDAO.save(producto);
+    	}else {
+    		
+    		throw new NotFoundException("Producto no encontrado");
+    	}
 
     }
 
