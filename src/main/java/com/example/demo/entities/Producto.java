@@ -33,15 +33,16 @@ public class Producto {
     @Column(name = "precio")
     private double precio;
 
-    public Long getId() {
-        return idProducto;
-    }
+   
+    public Long getIdProducto() {
+		return idProducto;
+	}
 
-    public void setId(Long id) {
-        this.idProducto = id;
-    }
+	public void setIdProducto(Long idProducto) {
+		this.idProducto = idProducto;
+	}
 
-    public String getCodigo() {
+	public String getCodigo() {
         return codigo;
     }
 

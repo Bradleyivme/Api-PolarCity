@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.DAO.ProductoDAO;
 import com.example.demo.entities.Producto;
-import com.example.demo.entities.Usuario;
 import com.example.demo.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,7 +44,7 @@ public class ProductoServiceImpl implements ProductoService{
     @Override
     public void modificarProducto(long id, Producto producto) {
     	if(productoDAO.existsById(id)) {
-    		producto.setId(id);
+    		producto.setIdProducto(id);
     		productoDAO.save(producto);
     	}else {
     		
