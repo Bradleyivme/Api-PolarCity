@@ -16,14 +16,14 @@ import javax.validation.constraints.NotNull;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProducto;
+    private Long id;
 
     @NotBlank(message = "Debe ingresar el código del producto")
     @Column(name = "codigo")
     private String codigo;
 
     @NotBlank(message = "Debe ingresar el nombre del producto")
-    @Column(name = "nombreProducto")
+    @Column(name = "nombreproducto")
     private String nombreProducto;
 
     @NotBlank(message = "Debe ingresar la descripción")
@@ -35,13 +35,13 @@ public class Producto {
     @Column(name = "precio")
     private double precio;
 
-   
-    public Long getIdProducto() {
-		return idProducto;
+
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdProducto(Long idProducto) {
-		this.idProducto = idProducto;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getCodigo() {

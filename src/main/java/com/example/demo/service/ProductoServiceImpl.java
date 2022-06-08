@@ -44,7 +44,7 @@ public class ProductoServiceImpl implements ProductoService{
     @Override
     public void modificarProducto(long id, Producto producto) {
     	if(productoDAO.existsById(id)) {
-    		producto.setIdProducto(id);
+    		producto.setId(id);
     		productoDAO.save(producto);
     	}else {
     		
