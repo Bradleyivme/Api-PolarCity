@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.DAO.ProductoDAO;
 import com.example.demo.entities.Producto;
-import com.example.demo.entities.Usuario;
 import com.example.demo.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,10 +23,10 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public Producto buscarporId(long idProducto) {
-        Optional<Producto> OPproducto = productoDAO.findById(idProducto);
+        Optional<Producto> opProducto = productoDAO.findById(idProducto);
 
-        if(OPproducto.isPresent()) {
-            return OPproducto.get();
+        if(opProducto.isPresent()) {
+            return opProducto.get();
 
         }else {
 

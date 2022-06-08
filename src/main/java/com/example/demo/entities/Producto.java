@@ -1,28 +1,29 @@
 package com.example.demo.entities;
 
-import lombok.Getter;
-import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
-@Getter
-@Setter
 @Entity
 @Table(name ="productos")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProducto;
+    private Long id;
 
     @NotBlank(message = "Debe ingresar el código del producto")
     @Column(name = "codigo")
     private String codigo;
 
-
     @NotBlank(message = "Debe ingresar el nombre del producto")
-    @Column(name = "nombreProducto")
+    @Column(name = "nombreproducto")
     private String nombreProducto;
 
     @NotBlank(message = "Debe ingresar la descripción")
@@ -30,18 +31,20 @@ public class Producto {
     private String descripcion;
 
     @Min(value = 1)
+    @NotNull
     @Column(name = "precio")
     private double precio;
 
-    public Long getId() {
-        return idProducto;
-    }
 
-    public void setId(Long id) {
-        this.idProducto = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getCodigo() {
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCodigo() {
         return codigo;
     }
 
@@ -72,5 +75,7 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+    
+    //Hola solo cambiando
 
 }
