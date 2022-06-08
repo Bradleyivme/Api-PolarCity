@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name ="productos")
@@ -21,7 +22,6 @@ public class Producto {
     @Column(name = "codigo")
     private String codigo;
 
-
     @NotBlank(message = "Debe ingresar el nombre del producto")
     @Column(name = "nombreProducto")
     private String nombreProducto;
@@ -31,6 +31,7 @@ public class Producto {
     private String descripcion;
 
     @Min(value = 1)
+    @NotNull
     @Column(name = "precio")
     private double precio;
 

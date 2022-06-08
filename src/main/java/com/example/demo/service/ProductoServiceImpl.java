@@ -23,10 +23,10 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public Producto buscarporId(long idProducto) {
-        Optional<Producto> OPproducto = productoDAO.findById(idProducto);
+        Optional<Producto> opProducto = productoDAO.findById(idProducto);
 
-        if(OPproducto.isPresent()) {
-            return OPproducto.get();
+        if(opProducto.isPresent()) {
+            return opProducto.get();
 
         }else {
 
