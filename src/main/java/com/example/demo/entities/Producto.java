@@ -23,7 +23,7 @@ public class Producto {
     private String codigo;
 
     @NotBlank(message = "Debe ingresar el nombre del producto")
-    @Column(name = "nombreproducto")
+    @Column(name = "nombreProducto")
     private String nombreProducto;
 
     @NotBlank(message = "Debe ingresar la descripción")
