@@ -15,11 +15,15 @@ public class Orden {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrden;
 
-    @Column(name="cantidad")
+    @Column(name= "NombreCliente")
+    private String NombreCliente;
+
+    @Column(name="nit")
+    private int Nit;
+
+    @Column(name="total")
     @Min(value=1)
-    private double Cantidad;
-
-
+    private double Total;
 
     public Long getIdOrden() {
         return idOrden;
@@ -29,15 +33,27 @@ public class Orden {
         this.idOrden = idOrden;
     }
 
-    public double getCantidad() {
-        return Cantidad;
+    public String getNombreCliente() {
+        return NombreCliente;
     }
 
-    public void setCantidad(double cantidad) {
-        Cantidad = cantidad;
+    public void setNombreCliente(String nombreCliente) {
+        NombreCliente = nombreCliente;
     }
 
+    public int getNit() {
+        return Nit;
+    }
 
+    public void setNit(int nit) {
+        Nit = nit;
+    }
 
+    public double getTotal() {
+        return Total;
+    }
 
+    public void setTotal(double total) {
+        Total = total;
+    }
 }
