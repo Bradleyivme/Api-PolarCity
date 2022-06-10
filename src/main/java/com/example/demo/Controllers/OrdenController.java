@@ -34,11 +34,17 @@ public class OrdenController {
         ordenService.crearOrden(orden);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(value="/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public void modificarOrden (@PathVariable Long id, @RequestBody Orden orden) {
         ordenService.modificarOrden(id, orden);
     }
+
+    @DeleteMapping(value= "/{id}")
+    public void BorrarOrden(@PathVariable Long id){
+        ordenService.borrarOrden(id);
+    }
+
 
 
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
