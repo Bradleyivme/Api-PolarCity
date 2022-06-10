@@ -1,6 +1,8 @@
 package com.example.demo.entities;
 
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
+
 @Table(name ="productos")
 public class Producto {
     @Id
