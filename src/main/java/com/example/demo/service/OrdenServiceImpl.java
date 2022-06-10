@@ -57,7 +57,7 @@ public class OrdenServiceImpl implements OrdenService{
 
         }else {
 
-            throw new NotFoundException("Orden no existe");
+            throw new NotFoundException("Orden no se encuentra");
         }
 
     }
